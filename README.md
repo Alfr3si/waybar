@@ -8,4 +8,7 @@ consideraciones:
 si estas usando otra distribucion considera en eliminar el modulo de "custom/updates"
 se encuentra en la linea 170 ya que este es solo para actualizaciones de pacman ,yay, flatpaks y snap.
 
+cambiar la ubicacion de los wallpapers en el script wallpaper , esto para agregar la ruta a donde estan tus propios
+wallpapers
+
 es todo >-<
