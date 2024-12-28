@@ -14,3 +14,7 @@ cambiar la ubicacion de los wallpapers en el script wallpaper , esto para agrega
 wallpapers
 
 es todo >-<
+
+![desktop](https://raw.githubusercontent.com/Alfr3si/waybar/main/desktop.png)
+
+
