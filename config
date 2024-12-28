@@ -1,0 +1,180 @@
+{
+    "height":44,
+    "layer": "top",
+    "position": "top",
+    "spacing": 4,
+    "margin-top": 7,
+    "margin-botom": 0,
+    "width": 1880,
+    "output": "eDP-1",
+
+    "modules-left": [
+	"group/hardware",
+        "hyprland/window"
+    ],
+
+
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+
+
+    "modules-right": [
+	"tray",
+        "custom/notification",
+        "battery",
+        "clock",
+        "custom/powermenu"
+    ],
+
+
+    "custom/powermenu": {
+        "format": " ⏻ ",
+        "icon-size": 20,
+        "tooltip": false,
+        "on-click": "~/.config/waybar/powerbutton"
+    },
+
+
+    "custom/modules": {
+      "format": " ",
+      "icon-size": "20",
+      "interval": 86400,
+      "tooltip": false,
+      "on-click": "~/.config/waybar/launcher"
+    },
+
+
+    "custom/updates": {
+      "format": "󰏖  {}",
+      "tooltip-format": "{}",
+      "escape": true,
+      "return-type": "json",
+      "exec": "~/.config/waybar/updates",
+      "restart-interval": 60,
+      "tooltip": false
+    },
+
+
+
+    "custom/wallpaper": {
+      "format": " ",
+      "icon-size": "20",
+      "tooltip": false,
+      "on-click": "~/.config/waybar/wallpaper"
+    },
+
+
+    "pulseaudio": {
+	"tooltip": false,
+	"format": "{icon}  {volume}",
+        "format-bluetooth": "{icon} ",
+        "format-muted": "󰝛 ",
+        "format-icons": {
+            "headphones": "",
+            "default": "󰝚"
+        },
+    },
+
+
+    "backlight": {
+	"tooltip": false,
+        "format": "{icon} {percent}%",
+        "format-icons": " "
+    },
+
+
+    "tray": {
+	"icon-size": 25,
+        "spacing": 10
+    },
+
+
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "  {:%d-%m-%Y     %H:%M}",
+	"tooltip": false
+    },
+
+
+    "battery": {
+        "states": {
+	    "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+
+        "format": "{capacity}% {icon}",
+	"interval": 2,
+        "format-charging": "{capacity}%  ",
+        "format-plugged": "{capacity}%  ",
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+
+
+
+    "hyprland/workspaces": {
+      "disable-scroll": false,
+      "format": "{name}"
+    },
+
+
+    
+    "hyprland/window": {
+      "format": "{initialClass}",
+      "tooltip": true,
+      "rewrite": {
+	"firefox": "Mozilla Firefox",
+	"nvim": "Neovim",
+	"kitty": "Terminal",
+	"org.gnome.Nautilus": "Files",
+	"discord": "Discord",
+	"org.gnome.Software": "Store software",
+
+      },
+      "separate-outputs": true
+    },
+
+    
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "<span foreground='red'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": "󰂛<span foreground='red'><sup></sup></span>",
+            "dnd-none": "󰂛",
+            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "󰂛<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": "󰂛"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+
+
+    "group/hardware": {
+      "orientation": "inherit",
+      "drawer": {
+	  "transition-duration": 300,
+	  "children-class": "not-memory",
+	  "transition-left-to-right": true
+      },
+      "modules": [
+	  "custom/modules",
+	  "custom/updates",
+	  "pulseaudio",
+	  "backlight",
+	  "custom/wallpaper"
+      ]
+
+    }
+
+}
+
+

@@ -1,0 +1,321 @@
+
+@define-color white         #F2F2F2;
+@define-color black         #000000;
+@define-color text          #FFFFFF;
+@define-color lightgray     #686868;
+@define-color darkgray      #353535;
+@define-color red           #b80404;
+@define-color teal          #017554;
+@define-color blue          #00236e;
+@define-color purple        #7e2979;
+@define-color aqua          #0094b2;
+
+/*paleta de colores nord*/
+@define-color color0   #3B4252;  /* Polar Night */
+@define-color color1   #BF616A;  /* Red */
+@define-color color2   #A3BE8C;  /* Green */
+@define-color color3   #EBCB8B;  /* Yellow */
+@define-color color4   #81A1C1;  /* Blue */
+@define-color color5   #B48EAD;  /* Purple */
+@define-color color6   #88C0D0;  /* Teal */
+@define-color color7   #E5E9F0;  /* Snow Storm */
+
+@define-color color8   #4C566A;  /* Blue Gray */
+@define-color color9   #BF616A;  /* Red */
+@define-color color10  #A3BE8C;  /* Green */
+@define-color color11  #EBCB8B;  /* Yellow */
+@define-color color12  #81A1C1;  /* Blue */
+@define-color color13  #B48EAD;  /* Purple */
+@define-color color14  #8FBCBB;  /* Aqua */
+@define-color color15  #ECEFF4;  /* Snow */
+@define-color color16  #4C566A;  /*gris*/
+@define-color color17  #D08770;  /* Orange */
+
+@define-color transparent  rgba (0, 0, 0, 0.25);
+
+@define-color border-color @color16;
+@define-color background-module transparent;
+
+
+* {
+    font-size: 14px;
+    font-family: JetBrainsMono;
+}
+window#waybar {
+    background: linear-gradient(0deg, @color4, black);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border:2px solid @black;
+}
+
+#custom-powermenu {
+  font-size: 22px;
+  color: @color1;
+  border-radius: 20px;    
+  padding: 0px 8px 0px 5px;
+  margin: 3px 3px 3px 3px;
+  opacity: 1.0;
+  border: 2px solid @border-color;
+  font-weight: bold;
+  font-style: normal;
+  background-color: @background-module;
+}
+
+#custom-wallpaper {
+  font-size: 22px;
+  color: @color6;
+  border-radius: 20px;    
+  padding: 0px 8px 0px 15px;
+  margin: 3px 3px 3px 3px;
+  opacity: 1.0;
+  border: 2px solid @border-color;
+  font-weight: bold;
+  font-style: normal;
+
+  background-color: @background-module;
+}
+
+
+#custom-modules {
+  font-size: 22px;
+  color: #1793d1;
+  border-radius: 20px;    
+  padding: 0px 8px 0px 15px;
+  margin: 3px 3px 3px 3px;
+  opacity: 1.0;
+  border: 2px solid @border-color;
+  font-weight: bold;
+  font-style: normal;
+
+  background-color: @background-module;
+}
+
+#custom-updates {
+  font-size: 20px;
+  color: @color2;
+  border-radius: 20px;    
+  padding: 0px 8px 0px 15px;
+  margin: 3px 3px 3px 3px;
+  opacity: 1.0;
+  border: 2px solid @border-color;
+  font-weight: bold;
+  font-style: normal;
+
+  background-color: @background-module;
+}
+
+#pulseaudio {
+  font-size: 15px;
+  color: @color13;
+  border-radius: 20px;    
+  padding: 0px 8px 0px 15px;
+  margin: 3px 3px 3px 3px;
+  opacity: 1.0;
+  border: 2px solid @border-color;
+  font-weight: bold;
+  font-style: normal;
+
+  background-color: @background-module;
+}
+
+#backlight {
+  font-size: 15px;
+  color: @color17;
+  border-radius: 20px;    
+  padding: 0px 8px 0px 15px;
+  margin: 3px 3px 3px 3px;
+  opacity: 1.0;
+  border: 2px solid @border-color;
+  font-weight: bold;
+  font-style: normal;
+
+  background-color: @background-module;
+}
+
+#custom-revealer-left,
+#custom-revealer-right {
+    font-size: 25px;
+    color: @color13;
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-notification {
+
+    font-size: 20px;
+    color: @color3;
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;    
+    padding: 0px 8px 0px 10px;
+    margin: 3px 3px 3px 3px;
+    opacity: 1.0;
+    border: 2px solid @border-color;
+    font-weight: bold;
+    font-style: normal;
+
+    background-color: @background-module;
+}
+
+#custom-notification.none {
+
+    font-size: 20px;
+    color: @color3;
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;    
+    padding: 0px 17px 0px 15px;
+    margin: 3px 3px 3px 3px;
+    opacity: 1.0;
+    border: 2px solid @border-color;
+
+    background-color: @background-module;
+}
+
+#custom-notification.dnd-none,
+#custom-notification.dnd-inhibited-none {
+
+    font-size: 20px;
+    color: @color3;
+    padding: 0px 17px 0px 15px;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#clock {
+
+    font-size:15px;
+    color: aliceblue;
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;    
+    padding: 0px 17px 0px 15px;
+    margin: 3px 3px 3px 3px;
+    opacity: 1.0;
+    border: 2px solid @border-color;
+    font-weight: bold;
+    font-style: normal;
+
+    background-color: @background-module;
+}
+
+#tray  {
+    font-size: 15px;
+    color: aliceblue;
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;    
+    padding: 0px 17px 0px 15px;
+    margin: 3px 3px 3px 3px;
+    opacity: 1.0;
+    border: 2px solid @border-color;
+    font-style: normal;
+
+    background-color: @background-module;
+}
+
+#window  {
+    
+    font-size: 14px;
+    color:#FFFFFF;
+    border-radius: 20px;    
+    padding: 0px 17px 0px 15px;
+    margin: 3px 3px 3px 3px;
+    opacity: 1.0;
+    border: 2px solid @border-color;
+    font-weight: bold;
+    font-style: normal;
+
+    background-color: @background-module;
+}
+
+window#waybar.empty #window {
+    
+    font-size: 14px;
+    background-color: transparent;
+    border: 0px;
+}
+
+#workspaces {
+   
+    color:#FFFFFF;
+    border-radius: 20px;    
+    padding: 0px 1px;
+    margin: 3px 3px 3px 3px;
+    opacity: 1.0;
+    border: 2px solid @border-color;
+    font-weight: bold;
+    font-style: normal;
+    background-color: @background-module;
+
+}
+
+#workspaces button {
+    padding: 1px 1px;
+    margin: 3px 3px;
+    border-radius: 15px;
+    border:0px;
+    color: @color15;
+    opacity:1.0;
+}
+
+#workspaces button.active {
+    color: #FFFFFF;
+    transition: all 0.3s ease-in-out;
+    min-width: 40px;
+    border-radius: 15px;    
+    margin: 3px 3px 3px 3px;
+    opacity: 1.0;
+    border: 1px solid @border-color;
+    background: @color4;
+}
+
+#workspaces button.empty {
+    color: #FFFFFF;
+    opacity:1.0;
+}
+
+#workspaces button:hover {
+
+    background: rgba(0, 0, 0, 0);
+    color: snow;
+    transition: all 0.3s ease-in-out;
+    opacity:1.0;
+}
+
+#battery {
+    font-size: 15px;
+    border-radius: 20px;    
+    padding: 0px 17px 0px 15px;
+    margin: 3px 3px 3px 3px;
+    opacity: 1.0;
+    border: 2px solid @border-color;
+    color: white;
+    font-weight: bold;
+    font-style: normal;
+
+    background-color: @background-module;
+}
+
+#battery.warning {
+    color: @color3;
+    background: none;
+}
+
+#battery.charging, #battery.plugged {
+    color: @color2;
+}
+
+@keyframes blink {
+    to {
+        background: none;
+        color: white;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: @color1;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+

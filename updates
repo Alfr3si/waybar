@@ -1,0 +1,66 @@
+
+#!/bin/bash
+
+# Umbrales para colores del ícono
+threshhold_green=1
+threshhold_yellow=25
+threshhold_red=50
+
+# -------------------------------
+# Verificar actualizaciones Pacman
+# -------------------------------
+if ! updates_arch=$(pacman -Qu 2> /dev/null | wc -l); then
+    updates_arch=0
+fi
+
+# -------------------------------
+# Verificar actualizaciones AUR
+# -------------------------------
+if command -v yay > /dev/null 2>&1; then
+    if ! updates_aur=$(yay -Qua --aur 2> /dev/null | wc -l); then
+        updates_aur=0
+    fi
+else
+    updates_aur=0
+fi
+
+# -------------------------------
+# Verificar actualizaciones Flatpak
+# -------------------------------
+if command -v flatpak > /dev/null 2>&1; then
+    updates_flatpak=$(flatpak update --assumeyes 2> /dev/null | grep -c 'Update:')
+else
+    updates_flatpak=0
+fi
+
+# -------------------------------
+# Verificar actualizaciones Snap
+# -------------------------------
+if command -v snap > /dev/null 2>&1; then
+    updates_snap=$(snap refresh --list 2> /dev/null | wc -l)
+else
+    updates_snap=0
+fi
+
+# -------------------------------
+# Sumar actualizaciones totales
+# -------------------------------
+total_updates=$((updates_arch + updates_aur + updates_flatpak + updates_snap))
+
+# -------------------------------
+# Clase CSS
+# -------------------------------
+if [ "$total_updates" -ge $threshhold_red ]; then
+    css_class="red"
+elif [ "$total_updates" -ge $threshhold_yellow ]; then
+    css_class="yellow"
+elif [ "$total_updates" -ge $threshhold_green ]; then
+    css_class="green"
+else
+    css_class="none"
+fi
+
+# -------------------------------
+# Salida para Waybar
+# -------------------------------
+echo "{\"text\": \"$total_updates\", \"class\": \"$css_class\"}"
