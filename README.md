@@ -1,7 +1,7 @@
 #waybar
 la barra de waybar tiene incluido estos programas :
 >wlogout = para el apagado del sistema (yay Aur)
->nwg-drawer = para cambiar los wallpapers (pacman)
+>nwg-drawer = para menu de aplicaciones (pacman)
 >swww = para los wallpapers  (pacman)
 
 consideraciones:
