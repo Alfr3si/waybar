@@ -1,0 +1,19 @@
+@define-color background #282C34;
+@define-color foreground #7babbd;
+
+@define-color black          #1E222A;
+@define-color gray           #3E4451;
+@define-color gray-light     #5C6370;
+@define-color gray-lighter   #ABB2BF;
+
+@define-color red            #E06C75;
+@define-color orange         #D19A66;
+@define-color yellow         #E5C07B;
+@define-color green          #98C379;
+@define-color cyan           #56B6C2;
+@define-color blue           #61AFEF;
+@define-color purple         #C678DD;
+
+@define-color accent         #7BABBD;
+@define-color accent-soft    #6A9FB5;
+

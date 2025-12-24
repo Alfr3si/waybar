@@ -1,0 +1,8 @@
+#!/bin/bash
+
+updates_arch=$(checkupdates 2>/dev/null | wc -l)
+updates_aur=$(yay -Qua --aur --quiet 2>/dev/null | wc -l)
+all_updates=$((updates_arch + updates_aur))
+
+printf '{ "text": "%s", "tooltip": "Pacman: %s\\nAUR: %s" }\n' \
+"$all_updates" "$updates_arch" "$updates_aur"

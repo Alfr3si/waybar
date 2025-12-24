@@ -1,0 +1,161 @@
+@import "/home/alfr3d/.cache/wal/colors-waybar.css";
+* {
+  font-size: 14px;
+  font-family: "JetBrainsMono Nerd Font";
+}
+window#waybar {
+  margin: 0px;
+  padding: 0px;
+  background: @color2;
+}
+
+/* style middle top*/
+#custom-cpu_icon {
+  background-color: @color5;
+  color: @background;
+  padding: 2px 0px 0px 3px;
+  margin: 0px 5px 0px 5px;
+  border-radius: 12px 12px 0px 0px;
+  font-weight: bold;
+  font-size: 15px;
+}
+#custom-memory_icon {
+  background-color: @color5;
+  color: @background;
+  padding: 2px 0px 0px 3px;
+  margin: 0px 5px 0px 5px;
+  border-radius: 12px 12px 0px 0px;
+  font-weight: bold;
+  font-size: 15px;
+}
+#custom-temp_icon {
+  background-color: @color5;
+  color: @background;
+  padding: 2px 0px 0px 5px;
+  margin: 0px 5px 0px 5px;
+  border-radius: 12px 12px 0px 0px;
+  font-weight: bold;
+  font-size: 15px;
+}
+#custom-pulseaudio_icon {
+  background-color: @color5;
+  color: @background;
+  padding: 2px 0px 0px 0px;
+  margin: 0px 5px 0px 5px;
+  border-radius: 12px 12px 0px 0px;
+  font-weight: bold;
+  font-size: 15px;
+}
+#custom-updates_icon {
+  background-color: @color5;
+  color: @background;
+  padding: 2px 0px 0px 0px;
+  margin: 0px 5px 0px 5px;
+  border-radius: 12px 12px 0px 0px;
+  font-weight: bold;
+  font-size: 15px;
+}
+#custom-network {
+  background-color: @color5;
+  color: @background;
+  padding: 5px 4px 5px 0px;
+  margin: 0px 5px 8px 5px;
+  border-radius: 12px 12px 12px 12px;
+  font-weight: bold;
+  font-size: 15px;
+}
+#clock {
+  background-color: @color5;
+  color: @background;
+  padding: 5px 7px 5px 7px; /* ambos 7 arreglan el ancho de la barra*/
+  margin: 0px 5px 8px 5px;
+  border-radius: 12px 12px 12px 12px;
+  font-weight: bold;
+  font-size: 15px;
+}
+/* style middle bottom */
+
+#custom-cpu {
+  background-color: @background;
+  color: @color5;
+  padding: 5px 0px 5px 0px;
+  margin: 0px 5px 8px 5px;
+  border-radius: 0px 0px 12px 12px;
+}
+#memory {
+  background-color: @background;
+  color: @color5;
+  padding: 5px 0px 5px 0px;
+  margin: 0px 5px 8px 5px;
+  border-radius: 0px 0px 12px 12px;
+}
+#custom-temp {
+  background-color: @background;
+  color: @color5;
+  padding: 5px 0px 5px 0px;
+  margin: 0px 5px 8px 5px;
+  border-radius: 0px 0px 12px 12px;
+}
+#pulseaudio {
+  background-color: @background;
+  color: @color5;
+  padding: 5px 0px 5px 0px;
+  margin: 0px 5px 8px 5px;
+  border-radius: 0px 0px 12px 12px;
+}
+#custom-updates {
+  background-color: @background;
+  color: @color5;
+  padding: 5px 0px 5px 0px;
+  margin: 0px 5px 8px 5px;
+  border-radius: 0px 0px 12px 12px;
+}
+
+/*colors for the modules*/
+#tags button {
+  all: unset;
+}
+#tags {
+  background-color: @background;
+  border-radius: 12px 12px 12px 12px;
+  border: 3px solid @color5;
+  margin: 0px 5px 0px 5px;
+  padding: 5px 5px 5px 5px;
+}
+#tags button {
+  font-size: 20px;
+  color: #717278;
+}
+#tags button.occupied {
+  color: #717278;
+  font-size: 13px;
+}
+#tags button.focused {
+  font-size: 20px;
+  color: white;
+}
+#tags button:hover {
+  font-size: 20px;
+  color: #717278;
+  background: transparent;
+  transition: none;
+  animation: none;
+}
+#battery.warning {
+  color: #ebcb8b;
+  background: none;
+}
+#battery.charging {
+  color: #a3be8c;
+  background: none;
+}
+#battery.critical:not(charging) {
+  color: #bf616a;
+  background: none;
+}
+tooltip {
+  background-color: @background;
+  color: #cdd6f4;
+  border-radius: 6px;
+  border: 1px solid #45475a;
+}

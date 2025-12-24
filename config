@@ -1,0 +1,20 @@
+{
+    "layer": "top",
+    "position": "left",
+
+    "modules-left": [
+        "clock",
+        "group/updates",
+    ],
+
+    "modules-center": [
+        "river/tags",
+    ],
+
+    "modules-right": [
+        "group/modules",
+    ],
+    "include": [
+    "~/.config/waybar/modules.json"
+    ]
+}
