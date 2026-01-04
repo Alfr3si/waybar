@@ -2,9 +2,12 @@
     "layer": "top",
     "position": "left",
 
+    "include": [ "~/.config/waybar/modules.json" ],
+
     "modules-left": [
         "clock",
-        "group/updates",
+        "custom/updates_icon",
+        "custom/updates"
     ],
 
     "modules-center": [
@@ -12,9 +15,15 @@
     ],
 
     "modules-right": [
-        "group/modules",
+      "custom/cpu_icon",
+      "custom/cpu",
+      "custom/memory_icon",
+      "memory",
+      "custom/temp_icon",
+      "custom/temp",
+      "custom/pulseaudio_icon",
+      "pulseaudio",
+      "custom/network",
+      "tray"
     ],
-    "include": [
-    "~/.config/waybar/modules.json"
-    ]
 }

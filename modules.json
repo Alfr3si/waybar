@@ -32,7 +32,7 @@
 	"custom/pulseaudio_icon": {
 	  "format": " ",
 	  "tooltip": false,
-          "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+      "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
 	  "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+",
 	  "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
 	},
@@ -41,30 +41,7 @@
 	  "tooltip": false
 	},
 // fin
-  "group/updates" : {
-    "orientation" : "vertical",
-    "drawer" : false,
-    "modules" : [
-      "custom/updates_icon",
-      "custom/updates"
-    ]
-  },
-  "group/modules": {
-    "orientation": "vertical",
-    "drawer": false,
-    "modules": [
-      "custom/cpu_icon",
-      "custom/cpu",
-      "custom/memory_icon",
-      "memory",
-      "custom/temp_icon",
-      "custom/temp",
-      "custom/pulseaudio_icon",
-      "pulseaudio",
-      "custom/network",
-      "tray"
-    ]
-  },
+
   "pulseaudio": {
     "tooltip": false,
     "format": "{volume}%",
