@@ -5,25 +5,22 @@
     "include": [ "~/.config/waybar/modules.json" ],
 
     "modules-left": [
-        "clock",
+        "custom/memory_icon",
+        "memory",
+        "group/data",
         "custom/updates_icon",
-        "custom/updates"
+        "custom/updates",
     ],
 
     "modules-center": [
-        "river/tags",
+        "niri/workspaces",
     ],
 
     "modules-right": [
-      "custom/cpu_icon",
-      "custom/cpu",
-      "custom/memory_icon",
-      "memory",
-      "custom/temp_icon",
-      "custom/temp",
+      "group/systray",
+      "clock",
+      "niri/language",
       "custom/pulseaudio_icon",
       "pulseaudio",
-      "custom/network",
-      "tray"
     ],
 }
