@@ -136,20 +136,6 @@
     "tooltip": false
     },
 
-   "group/data": {
-       "orientation": "inherit",
-       "drawer": {
-           "transition-duration": 300,
-           "transition-left-to-right": false
-       },
-        "modules": [
-      "custom/menu_icon",
-      "custom/cpu_icon",
-      "custom/cpu",
-      "custom/temp_icon",
-      "custom/temp"
-     ]
-   },
    "group/systray": {
        "orientation": "inherit",
        "drawer": {
