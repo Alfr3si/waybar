@@ -147,23 +147,22 @@ window#waybar {
   background-color: @background;
   border-radius: 12px 12px 12px 12px;
   border: 3px solid @color5;
-  margin: 0px 5px 0px 5px;
-  padding: 5px 3px 5px 0px;
+  margin: 0px 7px 0px 7px;
+  padding: 4px 3px 4px 0px;
 }
 #workspaces button {
+  color: @color5;
   font-size: 20px;
-  color: #717278;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 5px 0px 7px;
 }
 #workspaces button.active {
   font-size: 20px;
-  color: @foreground;
-}
-#workspaces button:hover {
-  font-size: 20px;
-  color: @foreground;
-  background: transparent;
-  transition: none;
-  animation: none;
+  padding: 5px 0px 5px 0px;
+  border-radius: 20px;
+  border: 1px solid @color5;
+  margin: 0px 2px 0px 5px;
+  background-color: @color5;
 }
 #battery.warning {
   color: #ebcb8b;
